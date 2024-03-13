@@ -6,7 +6,7 @@ import {ICoinFlip} from "../../../src/ethernaut/03-coinflip/ICoinFlip.sol";
 
 contract CoinFlipScript is Script {
 
-    address coinFlipInstanceAddress = vm.envAddress("L03_COINFLIP_ADDRESS");
+    address coinFlipInstanceAddress = vm.envAddress("L03_COINFLIP_INSTANCE");
     uint256 privateKey = vm.envUint("ACCOUNT_1_PRIVATE_KEY");
     uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
 
