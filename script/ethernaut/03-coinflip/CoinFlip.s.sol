@@ -25,10 +25,10 @@ contract CoinFlipScript is Script {
         // Call `flip()` passing the expected side
         require(blockNumber == block.number, "New block!");
         vm.broadcast(privateKey);
-        bool result = coinflip.flip(coinSide);
+        coinflip.flip(coinSide);
     }
 
-    function _getCoinSide(uint256 _blockNumber) internal returns (bool) {
+    function _getCoinSide(uint256 _blockNumber) internal view returns (bool) {
         uint256 coinFlip = uint256(blockhash(_blockNumber - 1)) / FACTOR;
         return coinFlip == 1;
     }

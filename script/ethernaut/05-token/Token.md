@@ -33,7 +33,7 @@ Level address
 
 ## Goal v Vulnerability
 
-Level is complete when the players' balance is bigger than the allocated upon contract deployment (see [TokenFactory](https://github.com/OpenZeppelin/ethernaut/blob/4d4c0a7fb969f69440153718d611b0c39b66a18c/contracts/contracts/levels/TokenFactory.sol#L21C28-L21C35))
+Level is complete when the player's balance is bigger than the allocated upon contract deployment (see [TokenFactory](https://github.com/OpenZeppelin/ethernaut/blob/4d4c0a7fb969f69440153718d611b0c39b66a18c/contracts/contracts/levels/TokenFactory.sol#L21C28-L21C35))
 
 v
 
@@ -59,4 +59,4 @@ If there is an overflow, the code will revert.
 
 :green_circle: **Complete**!
 
-NB: This example lacks a script because of the different Solidity versions!
+NB: This example lacks script because of the different Solidity versions!

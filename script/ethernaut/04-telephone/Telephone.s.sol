@@ -11,8 +11,6 @@ contract TelephoneScrcipt is Script {
     address telephoneInstanceAddress = vm.envAddress("L04_TELEPHONE_INSTANCE");
     address phishingAttackAddress; // 0x342c462A14D2742b48536Dd8a90626bEF4aAefBe
 
-    event TelephoneAttacked(address telephoneOwner, address phishingAttackOwner, address phishingAttackAddress);
-
     function run() public {
         vm.startBroadcast(privateKey);
 
@@ -23,7 +21,6 @@ contract TelephoneScrcipt is Script {
         // Set Telephone instance and change Telephones owner
         phishingAttack.setTelephoneInstance(telephoneInstanceAddress);
         phishingAttack.attack();
-        emit TelephoneAttacked(ITelephone(telephoneInstanceAddress).owner(), phishingAttack.owner(), phishingAttackAddress);
 
         vm.stopBroadcast();
     }
