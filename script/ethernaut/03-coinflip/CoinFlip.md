@@ -2,7 +2,7 @@
 
 ## Smart Contract
 
-```sol
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -41,13 +41,14 @@ contract CoinFlip {
 Level address 
 `0xA62fE5344FE62AdC1F356447B669E9E6D10abaaF`
 
+## Goal v Vulnerability
+
 Level is complete upon 10 `consecutiveWins`
 (see [CoinFlipFactory](https://github.com/OpenZeppelin/ethernaut/blob/4d4c0a7fb969f69440153718d611b0c39b66a18c/contracts/contracts/levels/CoinFlipFactory.sol#L17))
 
+v
 
-## What is the issue at hand
-
-Poor source of randomness, coin side can be guessed.
+Coin side can be guessed (poor source of randomness).
 
 ## Status
 
