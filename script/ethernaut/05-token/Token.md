@@ -33,7 +33,15 @@ Level address
 
 ## Goal v Vulnerability
 
-Level is complete when the player's balance is bigger than the allocated upon contract deployment (see [TokenFactory](https://github.com/OpenZeppelin/ethernaut/blob/4d4c0a7fb969f69440153718d611b0c39b66a18c/contracts/contracts/levels/TokenFactory.sol#L21C28-L21C35))
+Level is complete when the player's balance is bigger than the allocated upon deployment
+[TokenFactory](https://github.com/OpenZeppelin/ethernaut/blob/4d4c0a7fb969f69440153718d611b0c39b66a18c/contracts/contracts/levels/TokenFactory.sol#L21C28-L21C35)
+
+```solidity
+function validateInstance(address payable _instance, address _player) override public returns (bool) {
+  Token token = Token(_instance);
+  return token.balanceOf(_player) > playerSupply;
+}
+```
 
 v
 
