@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract SelfDestructAttack is Ownable {
-    constructor(address initialOwner) payable Ownable(initialOwner) {}
+    constructor(address _initialOwner) payable Ownable(_initialOwner) {}
 
     receive() external payable {}
 
