@@ -35,8 +35,13 @@ function validateInstance(address payable _instance, address _player) override p
 
 v
 
-??
+An attacker can send ether to a contract by self destroying another contract.
+Don't rely on `address(this).balance` for any contract logic.
 
 ## Status
 
-WIP
+:green_circle: **Complete**!
+
+```bash
+forge script script/ethernaut/07-force/Force.s.sol --rpc-url $RPC_ETH_TESTNET_SEPOLIA --broadcast -vvvv
+```
