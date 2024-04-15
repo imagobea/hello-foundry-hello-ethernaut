@@ -27,7 +27,15 @@ Level address
 
 ## Goal v Vulnerability
 
-Level is complete upon claiming ownership of the contract (see [TelephoneFactory](https://github.com/OpenZeppelin/ethernaut/blob/4d4c0a7fb969f69440153718d611b0c39b66a18c/contracts/contracts/levels/TelephoneFactory.sol#L18))
+Level is complete upon claiming ownership of the contract
+[TelephoneFactory](https://github.com/OpenZeppelin/ethernaut/blob/4d4c0a7fb969f69440153718d611b0c39b66a18c/contracts/contracts/levels/TelephoneFactory.sol#L18)
+
+```solidity
+function validateInstance(address payable _instance, address _player) override public view returns (bool) {
+  Telephone instance = Telephone(_instance);
+  return instance.owner() == _player;
+}
+```
 
 v
 

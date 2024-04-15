@@ -44,7 +44,14 @@ Level address
 ## Goal v Vulnerability
 
 Level is complete upon 10 `consecutiveWins`
-(see [CoinFlipFactory](https://github.com/OpenZeppelin/ethernaut/blob/4d4c0a7fb969f69440153718d611b0c39b66a18c/contracts/contracts/levels/CoinFlipFactory.sol#L17))
+[CoinFlipFactory](https://github.com/OpenZeppelin/ethernaut/blob/4d4c0a7fb969f69440153718d611b0c39b66a18c/contracts/contracts/levels/CoinFlipFactory.sol#L17)
+
+```solidity
+function validateInstance(address payable _instance, address) override public view returns (bool) {
+  CoinFlip instance = CoinFlip(_instance);
+  return instance.consecutiveWins() >= 10;
+}
+```
 
 v
 
